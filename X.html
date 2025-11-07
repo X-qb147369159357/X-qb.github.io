@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>致小郑</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(135deg, #fef7fb 0%, #fcf1f7 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+            padding: 20px;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23fce4ec' fill-opacity='0.3' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .blessing-card {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px 30px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 10px 30px rgba(250, 128, 114, 0.15);
+            border: 1px solid rgba(252, 191, 175, 0.4);
+            text-align: center;
+        }
+        .blessing-title {
+            font-size: 26px;
+            font-weight: 700;
+            color: #e53e3e;
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+        }
+        .blessing-title::after {
+            content: "❤️";
+            position: absolute;
+            top: -8px;
+            right: -30px;
+        }
+        .blessing-title::before {
+            content: "❤️";
+            position: absolute;
+            top: -8px;
+            left: -30px;
+        }
+        .blessing-content {
+            font-size: 19px;
+            color: #2d3748;
+            line-height: 2;
+            margin-bottom: 30px;
+        }
+        .blessing-content span {
+            color: #ed8936;
+            font-weight: 600;
+        }
+        .blessing-quote {
+            font-style: italic;
+            color: #4a5568;
+            font-size: 18px;
+            padding: 15px;
+            background-color: rgba(254, 240, 245, 0.6);
+            border-radius: 12px;
+            display: inline-block;
+        }
+        .snowflake {
+            position: absolute;
+            opacity: 0.8;
+            animation: snow 5s linear infinite;
+            z-index: -1;
+        }
+        @keyframes snow {
+            0% {
+                transform: translateY(-10px) rotate(0deg);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        for (let i = 0; i < 15; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.top = Math.random() * -50 + 'vh';
+            snowflake.style.fontSize = Math.random() * 15 + 10 + 'px';
+            snowflake.innerHTML = '❄️';
+            snowflake.style.animationDelay = Math.random() * 5 + 's';
+            document.body.appendChild(snowflake);
+        }
+    </script>
+
+    <div class="blessing-card">
+        <h2 class="blessing-title">致我的豆豆姐</h2>
+        <p class="blessing-content">
+            立冬啦，天气越来越冷啦<br>
+            以后穿厚一点，不要再感冒啦<br>
+            要开开心心快快乐乐的过每一天<br>
+            不要被小孩子气到了<br>
+            每天都是快乐的土豆<br>
+            过一个温暖的冬天
+        </p >
+        <span class="blessing-quote">—— 愿你以后幸福常伴左右，世界温暖如春</span>
+    </div>
+</body>
+</html>
